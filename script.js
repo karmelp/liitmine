@@ -1,10 +1,20 @@
-function calculateSum() {
+// document.querySelector('.calculateSum').addEventListener('click', onBtnClick);
+function onBtnClick() {
+    getFeedback()
+};
+
+function getSum(arr1, arr2) {
+    const sum = arr1 + arr2;
+    return sum
+}
+
+function getFeedback() {
     if(document.querySelector('input').value.length == 0){
         document.querySelector('.summa').innerHTML = 'Ma ei saa öelda, mis summa on, kui sa ei ütle, mida liita!'
     } else {
-        const liidetav1 = document.querySelector('#liidetav1').value;
-    const liidetav2 = document.querySelector('#liidetav2').value;
-    const sum = liidetav1 + liidetav2;
-    document.querySelector('.summa').innerHTML = `Kui liita ${liidetav1} ja ${liidetav2}, saame ${sum}.`
+        const liidetav1 = parseInt(document.querySelector('#liidetav1').value);
+        const liidetav2 = parseInt(document.querySelector('#liidetav2').value);
+        getSum(liidetav1, liidetav2)
+        document.querySelector('.summa').innerHTML = `Kui liita ${liidetav1} ja ${liidetav2}, saame ${getSum(liidetav1, liidetav2)}.`
     }
 }
