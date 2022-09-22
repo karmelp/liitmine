@@ -1,4 +1,5 @@
-// document.querySelector('.calculateSum').addEventListener('click', onBtnClick);
+document.querySelector('.calculateSum').addEventListener('click', onBtnClick);
+
 function onBtnClick() {
     getFeedback()
 };
