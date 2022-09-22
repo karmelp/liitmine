@@ -4,8 +4,8 @@ function onBtnClick() {
     getFeedback()
 };
 
-function getSum(arr1, arr2) {
-    const sum = arr1 + arr2;
+function getSum(arg1, arg2) {
+    const sum = arg1 + arg2;
     return sum
 }
 
